@@ -1,6 +1,7 @@
 const fs = require('fs');
 const express = require('express');
 const genericRoutes = express.Router();
+//generates the route depending on the folder in which the index is
 
 fs.readdir(__dirname, (__, items) => {
     if (items.length) {

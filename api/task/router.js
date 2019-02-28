@@ -7,7 +7,7 @@ const {
     deleteTask,
     getTaskById
 } = require('./controller');
-
+//we specify the route and the parameters by url when necessary
 Router.get('/task', getTasks);
 Router.post('/task', postTask);
 Router.put('/task/:id', updateTask);

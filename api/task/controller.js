@@ -59,6 +59,7 @@ const updateTask = async (req, res) => {
         })
     }
 }
+
 const deleteTask = async (req, res) => {
     try {
         let task = await dropTask(req.params.id);
@@ -69,6 +70,7 @@ const deleteTask = async (req, res) => {
         })
     }
 }
+//this is for fill the fields to edit the tasks
 const getTaskById = async (req, res) => {
     try {
         let task = await getTasksById(req.params.id);

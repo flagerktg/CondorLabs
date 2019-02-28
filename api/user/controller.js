@@ -13,7 +13,7 @@ const getUsers = async (req, res) => {
         })
     }
 };
-
+//add a new User
 const postUser = async (req, res) => {
     try {
         const {
