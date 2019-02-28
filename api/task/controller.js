@@ -15,7 +15,7 @@ const getTasks = async (req, res) => {
         })
     }
 };
-
+//add tasks 
 const postTask = async (req, res) => {
     try {
         const {
@@ -37,6 +37,7 @@ const postTask = async (req, res) => {
         })
     }
 }
+//edit task by id for each one
 const updateTask = async (req, res) => {
     try {
         const {
@@ -45,7 +46,7 @@ const updateTask = async (req, res) => {
             user,
             status
         } = req.body;
-        let task = await editTask(req.params.id,{
+        let task = await editTask(req.params.id, {
             name,
             description,
             user,
@@ -68,7 +69,7 @@ const deleteTask = async (req, res) => {
         })
     }
 }
-const getTaskById = async (req, res)=>{
+const getTaskById = async (req, res) => {
     try {
         let task = await getTasksById(req.params.id);
         return res.status(200).send(task);
